@@ -1374,6 +1374,7 @@ export function ThreatMap() {
       onLoad={handleMapLoad}
       mapStyle={`https://api.maptiler.com/maps/dataviz-dark/style.json?key=${MAPBOX_TOKEN}`}
       mapboxAccessToken={MAPBOX_TOKEN}
+      projection="globe"
       interactiveLayerIds={[
         ...(showClusters ? ["clusters"] : []),
         "unclustered-point",
