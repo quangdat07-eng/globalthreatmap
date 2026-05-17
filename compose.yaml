@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    # this is the file where you are suppose to put on your API keys
+    env_file:
+      - dot_env
+    ports:
+      - "3000:3000"

@@ -1,0 +1,6 @@
+NEXT_PUBLIC_MAPBOX_TOKEN=your_mapbox_token_here
+VALYU_API_KEY=your_valyu_api_key_here
+NEXT_PUBLIC_APP_MODE=self-hosted
+
+# Optional: Enable AI-powered location extraction for better accuracy
+OPENAI_API_KEY=your_openai_api_key_here
