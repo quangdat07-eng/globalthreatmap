@@ -195,8 +195,8 @@ export async function GET(request: Request) {
     // Deduplicate by URL
     const seen = new Set<string>();
     const unique = allEvents.filter((e) => {
-      if (seen.has(e.sourceUrl)) return false;
-      seen.add(e.sourceUrl);
+      if (seen.has(e.sourceUrl ?? "")) return false;
+      seen.add(e.sourceUrl ?? "");
       return true;
     });
 
@@ -226,8 +226,8 @@ export async function POST(request: Request) {
 
     const seen = new Set<string>();
     const unique = allEvents.filter((e) => {
-      if (seen.has(e.sourceUrl)) return false;
-      seen.add(e.sourceUrl);
+      if (seen.has(e.sourceUrl ?? "")) return false;
+      seen.add(e.sourceUrl ?? "");
       return true;
     });
 
