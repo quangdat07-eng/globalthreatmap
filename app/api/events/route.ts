@@ -263,7 +263,7 @@ async function fetchGDELTEvents(query: string): Promise<ThreatEvent[]> {
           country: location.country,
           placeName: location.country,
         },
-        timestamp: article.seendate ? new Date(article.seendate).toISOString() : new Date().toISOString(),
+        timestamp: new Date().toISOString(),
         source,
         sourceUrl: url,
         entities: extractEntities(title),
