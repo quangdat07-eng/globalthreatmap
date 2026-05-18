@@ -314,7 +314,7 @@ export async function GET(request: Request) {
     return NextResponse.json({
       events: unique,
       count: unique.length,
-      timestamp: article.seendate ? new Date(article.seendate).toISOString() : new Date().toISOString(),
+      timestamp: new Date().toISOString(),
     });
   } catch (error) {
     console.error("Error fetching events:", error);
