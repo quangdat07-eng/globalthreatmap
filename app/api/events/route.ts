@@ -263,7 +263,7 @@ async function fetchGDELTEvents(query: string): Promise<ThreatEvent[]> {
           country: location.country,
           placeName: location.country,
         },
-        timestamp: new Date().toISOString(),
+        timestamp: article.seendate ? new Date(article.seendate).toISOString() : new Date().toISOString(),
         source,
         sourceUrl: url,
         entities: extractEntities(title),
@@ -314,7 +314,7 @@ export async function GET(request: Request) {
     return NextResponse.json({
       events: unique,
       count: unique.length,
-      timestamp: new Date().toISOString(),
+      timestamp: article.seendate ? new Date(article.seendate).toISOString() : new Date().toISOString(),
     });
   } catch (error) {
     console.error("Error fetching events:", error);
