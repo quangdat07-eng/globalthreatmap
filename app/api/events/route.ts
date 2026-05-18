@@ -151,8 +151,8 @@ async function fetchGDELTEvents(query: string): Promise<ThreatEvent[]> {
         category: classifyCategory(title, ""),
         threatLevel: classifyThreatLevel(title, ""),
         location: {
-          lat: location.lat,
-          lng: location.lng,
+          latitude: location.lat,
+          longtitude: location.lng,
           country: location.country,
           placeName: location.country,
         },
