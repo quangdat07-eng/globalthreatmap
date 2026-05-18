@@ -78,7 +78,7 @@ export async function POST(request: Request) {
       Maximum 200 words. Be factual and neutral.`
     );
 
-    const profile = {
+    const profile: Record<string, any> = {
       id: `entity_${Date.now()}`,
       name,
       type: detectEntityType(name, description),
